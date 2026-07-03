@@ -16,6 +16,9 @@
 # number = True
 # print(number)
 # print(type(number))
+# print
+
+#flake8
 
 # let num = 10;
 # num = 30;
@@ -99,6 +102,7 @@
 ###
 # input -> буде очікувати на введення даних з клавіатури в
 # консолі і поверне за замовчуванням значення типу даних str
+
 
 # first_number = int(input("Enter first number: "))
 # second_number = int(input("Enter second number: "))
