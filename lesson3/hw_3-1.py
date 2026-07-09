@@ -14,7 +14,7 @@ match operation:
         result = number_1 * number_2
     case "/":
         if number_2 == 0:
-            print("Sorry,division by0 is not allowed")
+            print("Sorry, division by 0 is not allowed operation")
         else:
             result = number_1 / number_2
 print(f"The result is: {result}.")
