@@ -39,7 +39,6 @@ while run == "y" or run == "Y"  or run == "YES" or run == "yes":
                             numbers_list.append("0")
                             i += 1
                         print(f"The final list is: {numbers_list}")
-
             else:
                 print("Sorry, invalid input. You should enter only numbers.")
         else:
