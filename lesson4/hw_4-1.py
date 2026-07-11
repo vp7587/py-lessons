@@ -30,7 +30,7 @@ while run == "y" or run == "Y"  or run == "YES" or run == "yes":
                                 numbers_list.append(user_value_to_move)
                                 i += 1
                             print(f"The final list is: {numbers_list}")
-                 else:
+                else:
                     print("Sorry, invalid input. You should enter only numbers.")
             else:
                 print("Your list is empty")
