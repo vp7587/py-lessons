@@ -12,3 +12,4 @@ final_list.append(raw_range[2])
 final_list.append(raw_range[-2])
 print(f"Final list: {final_list}")
 
+
