@@ -31,6 +31,7 @@ while run == "y" or run == "Y"  or run == "YES" or run == "yes":
             else:
                 print("Sorry, invalid input. You should enter only numbers.")
         else:
-            print("Your list is empty")
+            result = 0
+            print(f"Your list is empty, so result: {result}")
     else:
         print("Exiting program... Good bye.")
