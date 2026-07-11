@@ -23,6 +23,7 @@ while run == "y" or run == "Y"  or run == "YES" or run == "yes":
                         else:
                             print(f"Well, your list has {user_value_to_move_in_list} your numbers. Going ahead..")
                             i = 0
+                            #Непосредственно перемещение элементов
                             while i < user_value_to_move_in_list:
                                 index_of_user_value_to_move_in_list = numbers_list.index(user_value_to_move)
                                 numbers_list.remove(user_value_to_move)
