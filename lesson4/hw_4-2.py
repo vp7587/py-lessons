@@ -1,3 +1,4 @@
+import sys
 print("The program will summ even elements of the list and multiply it on the last element of the list.\n")
 run = "y"
 while run == "y" or run == "Y"  or run == "YES" or run == "yes":
@@ -35,3 +36,4 @@ while run == "y" or run == "Y"  or run == "YES" or run == "yes":
             print(f"Your list is empty, so result: {result}")
     else:
         print("Exiting program... Good bye.")
+        sys.exit()

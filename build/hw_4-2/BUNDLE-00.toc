@@ -1,0 +1,3 @@
+([('hw_4-2',
+   '/Users/derek/PycharmProjects/PlinskyiVolodymyr/dist/hw_4-2',
+   'EXECUTABLE')],)
