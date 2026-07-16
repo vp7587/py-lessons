@@ -10,8 +10,8 @@ while True:
                   "Ensure sting len more then 0 ang less then 254 and try again.")
         else:
             raw_string_list = list(raw_string)
-            EXCLUDE_PUNCTUATION_RAW = "".join(list(string.punctuation))
-            EXCLUDE_PUNCTUATION = EXCLUDE_PUNCTUATION_RAW.replace("_", " ")
+            exclude_punctuation_raw = "".join(list(string.punctuation))
+            EXCLUDE_PUNCTUATION = exclude_punctuation_raw.replace("_", " ")
             EXCLUDE_NAMES = keyword.kwlist
             #use system names check
             if raw_string in EXCLUDE_NAMES:
