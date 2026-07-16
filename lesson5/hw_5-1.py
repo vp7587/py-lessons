@@ -25,12 +25,14 @@ while True:
             # __ and ___ check
             underscore_list = ("__","___")
             if raw_string in underscore_list:
-                print("\nSorry, var string is not allowed to because of using __ or ___ or space .\n")
+                print("\nSorry, var string is not allowed to because of using __ or ___ .\n")
                 continue
+            #upper check
             for char in raw_string_list:
                 if char in string.ascii_uppercase:
                     print("\nSorry, var string is not allowed. (To upper char is not allowed).\n")
                     continue
+            # first digit check
             if raw_string_list[0].isdigit():
                 print("\nSorry, var string is not allowed. First char cant be number.\n")
                 continue
