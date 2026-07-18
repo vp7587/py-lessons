@@ -1,5 +1,5 @@
 import sys
-print("Program will make product of numbers in string until result less or equal than 9")
+print("Program will make product of numbers in string until result is not less or equal than 9")
 while True:
     run_program = str.strip(str.lower(input("Would you like to continue?(Type y/yes if you do):\n")))
     if run_program == "y" or run_program == "yes":
