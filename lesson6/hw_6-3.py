@@ -6,11 +6,11 @@ while True:
         user_string = input("Please enter integer number (min length is 1.\n")
         #length check
         if len(user_string) < 1:
-            print("Sorry, your number is less then 1. Try again\n")
+            print("\nError: sorry, you enter less then 1 symbol. Try again\n")
             continue
         #is digit check
         if (user_string.isdigit() == False):
-            print("Please enter integer number with min length = 1.\n")
+            print("\nError: you should put only digits.\n")
             continue
         list_user_string = list(user_string)
         #start calculating
@@ -20,10 +20,10 @@ while True:
             result = 1
             for i in list_user_string:
                 result *= int(i)
-            print(f"Round {round} result: {result}")
+            print(f"...calculation is in progress... Notification: round {round} result {result}")
             list_user_string = list(str(result))
             round += 1
-        print(f"Final number is: {result}\n")
+        print(f"\nSuccess! The final number is {result}\n")
     else:
         print("Good bye.")
         sys.exit()
