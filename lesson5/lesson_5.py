@@ -60,9 +60,10 @@
 # else:
 #     print(a2)
 #
-# print(ord("A"))
-# print(chr(65))
-# print(chr(99))
+print(ord("A"))
+print(ord("a"))
+print(chr(65))
+print(chr(99))
 
 ####
 # text = "helLo woRlD"
