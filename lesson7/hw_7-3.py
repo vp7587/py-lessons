@@ -1,4 +1,4 @@
-import sys,string
+import sys
 
 print("The program includes function, which finds second inclusion of substring in text")
 
