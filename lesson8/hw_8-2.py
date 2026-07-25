@@ -25,7 +25,6 @@ while True:
         assert is_palindrome(case_2) == False, 'Test2'
         assert is_palindrome(case_3) == True, 'Test3'
         assert is_palindrome(case_4) == False, 'Test4'
-        # is_palindrome('A man, a plan, a canal: Panama')
         print("\nAll tests are done.")
     else:
         print("Good bye.")
