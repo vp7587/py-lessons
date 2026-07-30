@@ -1,4 +1,10 @@
-def difference (*arg):
+def difference (*arg) -> int|float:
+    """
+    The function takes any number of positional arguments and returns the difference between them.
+
+    :param arg:
+    :return: float
+    """
     arg_list = list(arg)
     if arg_list:
         min_value = min(arg_list)
