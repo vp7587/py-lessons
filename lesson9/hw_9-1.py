@@ -1,4 +1,11 @@
 def popular_words (text, words):
+    """
+    The function popular_words takes a text and a set of words and returns a dictionary of words and their frequencies.
+
+    :param text:
+    :param words:
+    :return: dictionary with words as keys and their frequencies as values.
+    """
     words = list(words)
     words_in_text = (str(text)).strip().lower().split()
     result = {}
