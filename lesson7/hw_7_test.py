@@ -1,21 +1,19 @@
-def reverse_words(sentence):
-    sentence = str(sentence)
-    reversed_sentence = ""
-    print(sentence.find(" "))
+def square_numbers(numbers):
+    """
+    Замінює кожне число у списку його квадратом.
 
-    while True:
-        if sentence.find(" ") > 0:
-            part = ''.join(reversed(sentence[0:sentence.find(" ")]))
-            reversed_sentence = reversed_sentence + part + " "
-            sentence = sentence[(sentence.find(" "))+1:]
-        else:
-            part = ''.join(reversed(sentence))
-            reversed_sentence = reversed_sentence +part
-            break
-    return(reversed_sentence)
+    :param numbers: Список чисел.
+    :return: Новий список з квадратами чисел.
+    """
+    numbers = list(numbers)
+    result = []
+    for number in numbers:
+        result.append(number ** 2)
+    return result
 
+# Перевірка
+assert square_numbers([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25]
+assert square_numbers([0, -1, -2, -3]) == [0, 1, 4, 9]
+assert square_numbers([]) == []
 
-#assert reverse_words("Hello world") == "olleH dlrow"
-print(reverse_words("Hello world"))
-
-
+a = square_numbers
