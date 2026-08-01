@@ -1,19 +1,47 @@
-def square_numbers(numbers):
+def repeat_decorator(repeat_count):
     """
-    Замінює кожне число у списку його квадратом.
+    Реалізує декоратор, який повторює виклик функції задану кількість разів.
 
-    :param numbers: Список чисел.
-    :return: Новий список з квадратами чисел.
+    :param repeat_count: Кількість повторень.
+    :return: Декоратор для повторюваного виклику функції.
     """
-    numbers = list(numbers)
-    result = []
-    for number in numbers:
-        result.append(number ** 2)
-    return result
+    count = 1
+    def mid_func(func):
+        def wrapper(*args, **kwargs):
+            nonlocal count
+            while count < repeat_count:
+                func()
+                count += 1
+            if repeat_count == 0 :
+                return None
+            else:
+                return func(*args, **kwargs)
+        return wrapper
+    return mid_func
+
+
+@repeat_decorator(2)
+def example_function():
+    print("Hello World!")
 
 # Перевірка
-assert square_numbers([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25]
-assert square_numbers([0, -1, -2, -3]) == [0, 1, 4, 9]
-assert square_numbers([]) == []
+print(example_function())
+#assert example_function() is None
 
-a = square_numbers
+
+# def additional_logic(func):
+#     count = 1
+#     def wrapper():
+#         print("Some logic 1")
+#         func()
+#         print("Some logic 2")
+#         nonlocal count
+#         count += 1
+#     return wrapper
+#
+#
+# @additional_logic
+# def hello():
+#     print("Hello World!")
+#
+# hello()
