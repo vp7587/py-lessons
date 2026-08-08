@@ -2,11 +2,8 @@ import re
 
 def is_even(number):
     even_list = [2,4,6,8]
-    print(number)
     last_number = re.search(r'.$', str(number))
     last_number = last_number.group()
-
-    print(last_number)
     if int(last_number) in even_list:
         return True
     else:
