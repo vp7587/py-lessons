@@ -17,17 +17,17 @@ def remove_tags (file_name):
     file = open(file_name, 'r', encoding="utf-8")
     for line in file:
         newline = re.findall(r">(.*)</", line)
-        if newline != "[]":
-            print(newline)
-        # add_lines_to_file(file_name, newline)
+        newline = str(newline).replace("]", "").replace("[", "").replace("'", "")
+        if len(str(newline)) !=0:
+            add_lines_to_file(file_name, newline)
     file.close()
 
 def add_lines_to_file(file_name, newline):
     filename = str(file_name).replace(".html", "_new.html")
-    print(filename)
-    # file = open(filename, 'a', encoding="utf-8")
-    # file.write(newline)
-    # file.close()
+    file = open(filename, 'a', encoding="utf-8")
+    file.write(newline)
+    file.write("\n")
+    file.close()
 
 
 file_name = "index.html"
