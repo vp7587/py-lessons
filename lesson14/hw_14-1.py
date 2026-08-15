@@ -1,6 +1,3 @@
-from asyncio import start_server
-
-
 class Human:
 
     def __init__(self, gender, age, first_name, last_name):
@@ -32,14 +29,17 @@ class Group:
     def add_student(self, student):
         self.group.add(student)
 
-    def delete_student(self, student):
-        self.group.remove(student)
+    def delete_student(self, last_name):
+        for student in self.group:
+            if last_name == student.last_name:
+                self.group.discard(student)
+                break
 
     def find_student(self, last_name):
         for student in self.group:
             if last_name == student.last_name:
                 return student
-            return f'Is not in'
+            # return f'Is not in'
 
     def __str__(self):
         all_students = ''
@@ -50,22 +50,17 @@ class Group:
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 
-
-
-# man = Human('Male', 30, 'Steve', 'Jobs')
-# print (man.age)
-
 gr = Group('PD1')
 gr.add_student(st1)
 gr.add_student(st2)
 
 print(gr)
-print (str(gr.find_student('Jobs')))
-# assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
-# assert gr.find_student('Jobs2') is None, 'Test2'
-# assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пошуку повинен повертати екземпляр'
+#  print (str(gr.find_student('Jobs')))
+assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
+assert gr.find_student('Jobs2') is None, 'Test2'
+assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пошуку повинен повертати екземпляр'
 #
-# gr.delete_student('Taylor')
-# print(gr)  # Only one student
-#
-# gr.delete_student('Taylor')  # No error!
+gr.delete_student('Taylor')
+print(gr)  # Only one student
+
+gr.delete_student('Taylor')  # No error!
